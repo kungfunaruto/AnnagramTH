@@ -1,0 +1,28 @@
+{
+  "source": "dictionaries",
+  "built_at": "2026-10-30T18:35:02.490Z",
+  "languages": {
+    "thai": {
+      "words": 37626,
+      "files": [
+        {
+          "file": "kumkom-words.txt",
+          "words": 37626
+        }
+      ],
+      "duplicates": 0,
+      "invalid": 0
+    },
+    "english": {
+      "words": 280887,
+      "files": [
+        {
+          "file": "enable1.txt",
+          "words": 280887
+        }
+      ],
+      "duplicates": 0,
+      "invalid": 0
+    }
+  }
+}
