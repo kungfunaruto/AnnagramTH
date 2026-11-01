@@ -37,7 +37,7 @@ export function initSettings() {
     <p><b>คณิต บิงโก</b> — ป้อนไทล์ในมือ หาสมการทีละ 10 สมการต่อหมวด · <b>ล็อกตำแหน่ง</b> — วางไทล์บนกระดานในแถว 15 ช่อง แอปบอกช่องที่วางสมการได้</p>
     <p>แตะคำหรือสมการในผลลัพธ์เพื่อคัดลอก</p>
   </div>
-  <div class="card"><h2>กติกาคณิต (A-Math) ที่แอปใช้</h2>
+  <div class="card"><h2>กติกาคณิต (Math) ที่แอปใช้</h2>
     <ul class="rules-list">
       <li>ไทล์ 0–9 วางติดกันเป็นจำนวนได้ไม่เกิน 3 หลัก (เช่น 125) และห้ามมีศูนย์นำหน้า (05)</li>
       <li>ไทล์ 10–20 เป็นไทล์เดียว วางติดกับไทล์ตัวเลขอื่นไม่ได้</li>
@@ -48,13 +48,9 @@ export function initSettings() {
       <li>สมการยาวอย่างน้อย 3 ไทล์</li>
     </ul>
   </div>
-  <div class="card"><h2>ความเป็นส่วนตัว</h2>
-    <p>แอปนี้ทำงานในเครื่องทั้งหมด ใช้ได้โดยไม่ต้องต่ออินเทอร์เน็ต ไม่ต้องลงชื่อเข้าใช้ ไม่มีโฆษณา และไม่เก็บหรือส่งข้อมูลใด ๆ ออกจากเครื่อง</p>
-    <p>การตั้งค่าบันทึกไว้ในเครื่องนี้เท่านั้น</p>
-  </div>
   <div class="card"><h2>เกี่ยวกับ</h2>
     <dl class="facts"><dt>แอป</dt><dd>AnagramTH</dd><dt>เวอร์ชัน</dt><dd>${APP_VERSION}</dd></dl>
-    <p class="hint">คลังคำภาษาอังกฤษ: ENABLE (Enhanced North American Benchmark Lexicon) — สาธารณสมบัติ (public domain)</p>
+    <p class="hint">คลังคำภาษาอังกฤษ: CSW2024</p>
   </div>`;
 
   // controls
@@ -72,8 +68,8 @@ export function initSettings() {
     const files = (lang) => (m.languages?.[lang]?.files || []).map((f) => f.file).join(", ");
     const built = new Date(m.built_at).toLocaleDateString("th-TH", { year: "numeric", month: "long", day: "numeric" });
     $("#dict-facts").innerHTML = `
-      <dt>ไทย</dt><dd>${fmt(info.thai)} คำ <span class="muted">(${esc(files("thai"))})</span></dd>
-      <dt>อังกฤษ</dt><dd>${fmt(info.english)} คำ <span class="muted">(ENABLE)</span></dd>
+      <dt>ไทย</dt><dd>${fmt(info.thai)} คำ</dd>
+      <dt>อังกฤษ</dt><dd>${fmt(info.english)} คำ</dd>
       <dt>สร้างเมื่อ</dt><dd>${esc(built)}</dd>` +
       (m.source === "test-fixtures" ? '<dt>หมายเหตุ</dt><dd>คลังคำทดสอบชุดเล็ก</dd>' : "");
   }).catch((err) => {

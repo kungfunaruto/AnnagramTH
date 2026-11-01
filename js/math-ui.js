@@ -43,7 +43,7 @@ function screenHtml() {
       <button role="tab" data-mode="bingo" aria-selected="true">บิงโก</button>
       <button role="tab" data-mode="board" aria-selected="false">ล็อกตำแหน่ง</button>
     </div>
-    <span class="pill lex">A-Math</span>
+    <span class="pill lex">Math</span>
   </header>
   <div class="view">
     <div class="controls">
